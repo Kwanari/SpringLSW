@@ -6,19 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller // 설명과 실행
+@Controller
 //객체 생성 + controller 역할 수행
 public class WeatherController {
 
 	@Autowired // 만든것을 주입
 	private WeatherService weatherservice;
 
-	@RequestMapping("/weather/list") // web.xml 참고
+	@RequestMapping("/weather/list")
 	public String getList(HttpServletRequest request) {
-		// dispatcherservlet > request 호출함
 
 		request.getParameter("");
-		System.out.println("go");
 
 		weatherservice.getList();
 
